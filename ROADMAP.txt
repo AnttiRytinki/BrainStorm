@@ -66,6 +66,8 @@ Some cheats are valid only in phase 1 and some only in phase 2 and some in both.
 
 /mergequotes(name) will merge the quotes for "name" from both players and save to hard drive.
 
+ALT key will suggest one of three words from memory.txt
+
 -----------------------
 
 If you wish to assist then email me at antti.rytinki@outlook.com and type "BrainStorm" in the subject field.

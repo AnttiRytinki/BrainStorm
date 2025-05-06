@@ -1,0 +1,3 @@
+﻿ftp=file transfer protocol
+hmb=hold my beer
+lol=laughing out loud

@@ -220,6 +220,9 @@ namespace BrainStorm
                         sw.WriteLine(System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " --- " + InputBox.Text + "\n");
                     }
 
+                    if (InputBox.Text.StartsWith('/'))
+                        Engine.HandleCheat(InputBox.Text);
+
                     if ((Engine.BoardHandler.CanAddToBoard(InputBox.Text) == false) || Helpers.WillBoardCoverageBeAbove(Engine.State, 50, InputBox.Text))
                     {
                         Engine.State.Phase = "[PHASE2]";

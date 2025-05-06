@@ -46,7 +46,7 @@ To enable cheats one player types /sv_cheats 1 whereby second player gets prompt
 You can only ask once each game.
 Some cheats are valid only in phase 1 and some only in phase 2 and some in both.
 
-/jesus whereby the app places "water" or "wine" in the grid.
+--- DONE /jesus whereby the app places "water" or "wine" in the grid.
 /paradox whereby the app puts a random paradox in the grid.
 /unreveal(x,y) [self explanatory]
 /story whereby the app takes "once", "upon", "a" and "time" and places them in the grid. Max one usage.

@@ -1,4 +1,5 @@
-﻿namespace BrainStorm
+﻿
+namespace BrainStorm
 {
     public class Engine
     {
@@ -20,6 +21,20 @@
         {
             State = new GameState();
             BoardHandler = new BoardHandler(State);
+        }
+
+        public void HandleCheat(string text)
+        {
+            if (GameHasStarted)
+            {
+                if (text == "/jesus")
+                {
+                    if (Helpers.RandBool() == true)
+                        BoardHandler.AddToBoard("water");
+                    else
+                        BoardHandler.AddToBoard("wine");
+                }
+            }
         }
     }
 }

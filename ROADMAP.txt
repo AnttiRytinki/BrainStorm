@@ -13,6 +13,8 @@ Will make it so arrow keys (or settings defined keys) can be
 used to select buttons,
 spacebar or enter will open seleccted button.
 
+Add number showing remaining words.
+
 Create defaults.cfg which says what your preferred defaults are.
 If on game start, defaults don't match the opponents, a prompt and chat is displayed for both players
 so you can agree on starting conditions for enabling commands, minigames and cheats.

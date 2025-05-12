@@ -3,6 +3,6 @@
     public static class Enums
     {
         public enum Direction { Horizontal, Vertical }
-        public enum GameMode { Solo, VersusAI, HotSeat, Online }
+        public enum GameMode { Solo, CoOp, VersusAI, HotSeat, Online }
     }
 }

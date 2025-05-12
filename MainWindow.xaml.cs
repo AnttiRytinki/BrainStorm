@@ -15,6 +15,8 @@ namespace BrainStorm
         public ChatBox ChatBox { get; set; } = new ChatBox();
         public AudioHandler AudioHandler { get; set; } = new AudioHandler();
 
+        public GameMode GameMode { get; set; } = GameMode.Solo;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -24,6 +26,12 @@ namespace BrainStorm
             if (File.Exists($"./memory.txt") == false)
                 File.Create($"./memory.txt");
 
+            if (File.Exists($"./SoloVocabulary.txt") == false)
+            {
+                File.Create($"./SoloVocabulary.txt");
+                SetupSoloVocabulary();
+            }
+
             if (File.Exists($"./settings.cfg") == false)
                 InitSettingsCfg();
         }
@@ -32,6 +40,11 @@ namespace BrainStorm
         {
             File.Create($"./settings.cfg");
             // TODO
+        }
+        
+        private void SetupSoloVocabulary()
+        {
+            throw new NotImplementedException();
         }
 
         private void Button_Click(object sender, MouseButtonEventArgs e)

@@ -23,6 +23,12 @@ namespace BrainStorm
 
             InitAllButtons();
 
+            if (File.Exists($"./users.txt") == false)
+            {
+                File.Create($"./users.txt");
+                CreateFirstUser();
+            }
+
             if (File.Exists($"./memory.txt") == false)
                 File.Create($"./memory.txt");
 
@@ -34,6 +40,11 @@ namespace BrainStorm
 
             if (File.Exists($"./settings.cfg") == false)
                 InitSettingsCfg();
+        }
+
+        private void CreateFirstUser()
+        {
+            throw new NotImplementedException();
         }
 
         private void InitSettingsCfg()

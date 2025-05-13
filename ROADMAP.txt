@@ -2,7 +2,8 @@
 Will create Solo Mode, Versus AI Mode, Hot Seat Mode and Online Mode
 
 At first launch enter 100 words, last 3 words entered are visible.
-Countdown ProgressBar 10 seconds. Only display bar, no remaining time.
+Countdown ProgressBar 10 seconds displayed while typing word.
+Only display bar, no remaining time.
 ProgressBar gradually shifts color from green to red.
 
 Will add to first launch NicknameCreator.

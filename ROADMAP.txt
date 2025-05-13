@@ -8,6 +8,8 @@ ProgressBar gradually shifts color from green to red.
 
 Will add to first launch NicknameCreator.
 
+Will add prevention to type the same word twice during game.
+
 Will add score equation for solo mode.
 Solo mode will work as follows:
 In phase 1, game gets and displays words from wordlist at 1 second intervals, where words are of max length 10.

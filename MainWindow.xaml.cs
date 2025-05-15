@@ -23,10 +23,11 @@ namespace BrainStorm
 
             InitAllButtons();
 
-            if (File.Exists($"./users.txt") == false)
+            if (File.Exists($"./players.txt") == false)
             {
-                File.Create($"./users.txt");
-                CreateFirstUser();
+                CreateNewPlayer();
+
+                File.Create($"./players.txt");
             }
 
             if (File.Exists($"./memory.txt") == false)
@@ -42,9 +43,10 @@ namespace BrainStorm
                 InitSettingsCfg();
         }
 
-        private void CreateFirstUser()
+        private Player CreateNewPlayer()
         {
-            throw new NotImplementedException();
+            var createNewPlayerWindow = new CreateNewPlayerWindow();
+            createNewPlayerWindow.Show();
         }
         
         private void SetupSoloVocabulary()

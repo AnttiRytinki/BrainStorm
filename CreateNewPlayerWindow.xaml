@@ -1,0 +1,19 @@
+﻿<Window x:Class="BrainStorm.CreateNewPlayerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BrainStorm"
+        mc:Ignorable="d"
+        Title="Create New Player" Height="222" Width="298">
+    <Grid>
+        <TextBlock x:Name="nameTextBlock" TextWrapping="Wrap" HorizontalAlignment="Left" Text="Name: " VerticalAlignment="Top" Margin="52,50,0,0"/>
+        <TextBox x:Name="nameTextBox" TextWrapping="Wrap" Text="" Width="120" Height="25" Margin="95,45,83,136"/>
+
+        <TextBlock x:Name="dateOfBirthTextBlock" TextWrapping="Wrap" HorizontalAlignment="Left" Text="Date Of Birth: " VerticalAlignment="Top" Margin="33,90,0,0"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="113,86,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name="button" Content="OK" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Width="50" Height="30" Click="OK_button_Click"/>
+
+    </Grid>
+</Window>

@@ -46,16 +46,16 @@ namespace BrainStorm
         {
             throw new NotImplementedException();
         }
+        
+        private void SetupSoloVocabulary()
+        {
+            throw new NotImplementedException();
+        }
 
         private void InitSettingsCfg()
         {
             File.Create($"./settings.cfg");
             // TODO
-        }
-        
-        private void SetupSoloVocabulary()
-        {
-            throw new NotImplementedException();
         }
 
         private void Button_Click(object sender, MouseButtonEventArgs e)

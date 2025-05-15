@@ -43,10 +43,12 @@ namespace BrainStorm
                 InitSettingsCfg();
         }
 
-        private Player CreateNewPlayer()
+        private Player? CreateNewPlayer()
         {
             var createNewPlayerWindow = new CreateNewPlayerWindow();
             createNewPlayerWindow.Show();
+
+            return createNewPlayerWindow.Player;
         }
         
         private void SetupSoloVocabulary()

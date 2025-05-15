@@ -10,6 +10,8 @@ Will add to first run CreateNewPlayer.
 
 Will add prevention to type the same word twice during game.
 
+Will make so the game textbox background turns red if more than 10 letters entered.
+
 Will add score equation for solo mode.
 Solo mode will work as follows:
 In phase 1, game asks user to inut words using Algoritmen, where words are of max length 10.
@@ -22,7 +24,7 @@ Add response time countdown (10 seconds) for Solo Mode
 Will make it so arrow keys (or settings defined keys) can be
 used to select buttons, spacebar or enter will open selected button.
 
-Add number showing remaining words.
+Add number showing remaining words. And AllWordsRevealed check.
 
 Create defaults.cfg which says what your preferred defaults are.
 If on game start, defaults don't match the opponents, a prompt and chat is displayed for both players

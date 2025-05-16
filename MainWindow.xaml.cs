@@ -19,22 +19,15 @@ namespace BrainStorm
 
         public Player? ActivePlayer { get; set; } = null;
 
-        public PlayersFileHandler PlayersFileHandler { get; set; } = new PlayersFileHandler();
+        public PlayersHandler PlayersFileHandler { get; set; } = new PlayersHandler();
 
         public MainWindow()
         {
             InitializeComponent();
 
             InitAllButtons();
-
-            if (File.Exists($"./players.txt") == false)
-            {
-                ActivePlayer = CreateNewPlayer();
-
-                //File.Create($"./players.txt");
-            }
-
-            ;
+            ActivePlayer = CreateNewPlayer();
+            PlayersFileHandler.AddPlayer(ActivePlayer);
 
             //if (File.Exists($"./memory.txt") == false)
             //    File.Create($"./memory.txt");

@@ -7,11 +7,17 @@
         mc:Ignorable="d"
         Title="Create New Player" Height="222" Width="298">
     <Grid>
-        <TextBlock x:Name="nameTextBlock" TextWrapping="Wrap" HorizontalAlignment="Left" Text="Name: " VerticalAlignment="Top" Margin="52,50,0,0"/>
-        <TextBox x:Name="nameTextBox" TextWrapping="Wrap" Text="" Width="120" Height="25" Margin="95,45,83,136"/>
+        <StackPanel Margin="50,50,0,0">
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="nameLabel" Content="Name: " Height="25"/>
+                <TextBox x:Name="nameTextBox" TextWrapping="Wrap" Text="" Width="120" Height="25"/>
+            </StackPanel>
 
-        <TextBlock x:Name="dateOfBirthTextBlock" TextWrapping="Wrap" HorizontalAlignment="Left" Text="Date Of Birth: " VerticalAlignment="Top" Margin="33,90,0,0"/>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="113,86,0,0" VerticalAlignment="Top"/>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="dateOfBirthLabel" Content="Date of birth: " Height="25"/>
+                <DatePicker x:Name="datePicker" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </StackPanel>
 
         <Button x:Name="button" Content="OK" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Width="50" Height="30" Click="OK_button_Click"/>
 

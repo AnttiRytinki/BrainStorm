@@ -19,6 +19,8 @@ namespace BrainStorm
 
         public Player? ActivePlayer { get; set; } = null;
 
+        public PlayersFileHandler PlayersFileHandler { get; set; } = new PlayersFileHandler();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -47,18 +49,12 @@ namespace BrainStorm
             //    InitSettingsCfg();
         }
 
-        private Player CreateNewPlayer()
+        private Player? CreateNewPlayer()
         {
             var createNewPlayerWindow = new CreateNewPlayerWindow();
-            createNewPlayerWindow.Show();
-
-            while ( createNewPlayerWindow.Player == null )
-            {
-            }
+            bool? result = createNewPlayerWindow.ShowDialog();
 
             return createNewPlayerWindow.Player;
-
-            //createNewPlayerWindow.PlayerCreated += CreateNewPlayerWindow_PlayerCreated;
         }
 
         private void CreateNewPlayerWindow_PlayerCreated(object? sender, Player player)

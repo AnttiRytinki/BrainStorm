@@ -17,6 +17,8 @@ namespace BrainStorm
 
         public GameMode GameMode { get; set; } = GameMode.Solo;
 
+        public Player? ActivePlayer { get; set; } = null;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -25,32 +27,45 @@ namespace BrainStorm
 
             if (File.Exists($"./players.txt") == false)
             {
-                CreateNewPlayer();
+                ActivePlayer = CreateNewPlayer();
 
-                File.Create($"./players.txt");
+                //File.Create($"./players.txt");
             }
 
-            if (File.Exists($"./memory.txt") == false)
-                File.Create($"./memory.txt");
+            ;
 
-            if (File.Exists($"./SoloVocabulary.txt") == false)
-            {
-                File.Create($"./SoloVocabulary.txt");
-                SetupSoloVocabulary();
-            }
+            //if (File.Exists($"./memory.txt") == false)
+            //    File.Create($"./memory.txt");
 
-            if (File.Exists($"./settings.cfg") == false)
-                InitSettingsCfg();
+            //if (File.Exists($"./SoloVocabulary.txt") == false)
+            //{
+            //    File.Create($"./SoloVocabulary.txt");
+            //    SetupSoloVocabulary();
+            //}
+
+            //if (File.Exists($"./settings.cfg") == false)
+            //    InitSettingsCfg();
         }
 
-        private Player? CreateNewPlayer()
+        private Player CreateNewPlayer()
         {
             var createNewPlayerWindow = new CreateNewPlayerWindow();
             createNewPlayerWindow.Show();
 
+            while ( createNewPlayerWindow.Player == null )
+            {
+            }
+
             return createNewPlayerWindow.Player;
+
+            //createNewPlayerWindow.PlayerCreated += CreateNewPlayerWindow_PlayerCreated;
         }
-        
+
+        private void CreateNewPlayerWindow_PlayerCreated(object? sender, Player player)
+        {
+            throw new NotImplementedException();
+        }
+
         private void SetupSoloVocabulary()
         {
             throw new NotImplementedException();

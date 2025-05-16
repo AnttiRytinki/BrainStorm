@@ -18,6 +18,8 @@ namespace BrainStorm
     {
         public Player? Player { get; set; } = null;
 
+        public event EventHandler<Player> PlayerCreated;
+
         public CreateNewPlayerWindow()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace BrainStorm
         private void OK_button_Click(object sender, RoutedEventArgs e)
         {
             Player = new Player(nameTextBox.Text, datePicker.SelectedDate);
+            PlayerCreated.Invoke(this, Player);
             this.Close();
         }
     }

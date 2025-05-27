@@ -39,10 +39,7 @@ Commands all start with %
 Minigames (or rather, game continuations) that start with #
 
 #tictactoe whereby the app expands to 30x30 where the center square is your original game,
-Players fight in the squares to put X or O,
-When board has been fully revealed.
-
-#robovacuum whereby the app places a smart robotic vacuum cleaner in your fully revealed board
+Players fight in the squares to put X or O
 
 Cheats all start with /
 

@@ -25,8 +25,6 @@ so you can agree on starting conditions for enabling commands, minigames and che
 
 In the future a separate server will be made which displays open game lobbies and these settings for each server.
 
-Local settings will include "Allow Audio" flag.
-
 Commands all start with %
 
 %wait(seconds) whereby the app displays the circle loading thingy for that amount of time for both players.

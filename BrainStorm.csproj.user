@@ -10,12 +10,24 @@
     <Compile Update="CreateNewPlayerWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="HighScoresWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainMenuWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="CreateNewPlayerWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="HighScoresWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainMenuWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

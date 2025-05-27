@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BrainStorm"
         mc:Ignorable="d"
-        Title="Create New Player" Height="222" Width="298">
+        Title="Create New Player" Height="220" Width="300">
     <Grid>
         <StackPanel Margin="50,50,0,0">
             <StackPanel Orientation="Horizontal">

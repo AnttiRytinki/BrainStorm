@@ -7,7 +7,7 @@ namespace BrainStorm
 {
     public class ScoresHandler
     {
-        public List<TimeScorePair> Scores { get; set; } = new List<TimeScorePair>();
+        public List<Score> Scores { get; set; } = new List<Score>();
         public string ScoresFile { get; set; } = $"./Scores.txt";
 
         public ScoresHandler()
@@ -33,16 +33,16 @@ namespace BrainStorm
             if (File.Exists(ScoresFile))
             {
                 string json = File.ReadAllText(ScoresFile);
-                Scores = JsonSerializer.Deserialize<List<TimeScorePair>>(json) ?? new List<TimeScorePair>();
+                Scores = JsonSerializer.Deserialize<List<Score>>(json) ?? new List<Score>();
             }
 
             else
             {
-                Scores = new List<TimeScorePair>();
+                Scores = new List<Score>();
             }
         }
 
-        public void AddScore(TimeScorePair? score)
+        public void AddScore(Score? score)
         {
             if (score != null)
                 Scores.Add(score);

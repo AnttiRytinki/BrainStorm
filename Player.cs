@@ -5,12 +5,10 @@ namespace BrainStorm
     public class Player
     {
         public string Name { get; set; } = "";
-        public DateTime? DateOfBirth { get; set; } = null;
 
-        public Player(string playerName, DateTime? dateOfBirth)
+        public Player(string playerName)
         {
             Name = playerName;
-            DateOfBirth = dateOfBirth;
         }
     }
 }

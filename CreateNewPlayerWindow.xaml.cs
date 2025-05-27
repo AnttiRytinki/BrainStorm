@@ -25,7 +25,7 @@ namespace BrainStorm
 
         private void OK_button_Click(object sender, RoutedEventArgs e)
         {
-            Player = new Player(nameTextBox.Text, datePicker.SelectedDate);
+            Player = new Player(nameTextBox.Text);
             this.DialogResult = true;
             this.Close();
         }

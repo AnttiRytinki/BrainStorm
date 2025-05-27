@@ -28,15 +28,7 @@ namespace BrainStorm
             InitAllButtons();
             ActivePlayer = CreateNewPlayer();
             PlayersFileHandler.AddPlayer(ActivePlayer);
-
-            //if (File.Exists($"./memory.txt") == false)
-            //    File.Create($"./memory.txt");
-
-            //if (File.Exists($"./SoloVocabulary.txt") == false)
-            //{
-            //    File.Create($"./SoloVocabulary.txt");
-            //    SetupSoloVocabulary();
-            //}
+            PlayersFileHandler.SavePlayers();
 
             //if (File.Exists($"./settings.cfg") == false)
             //    InitSettingsCfg();
@@ -45,19 +37,9 @@ namespace BrainStorm
         private Player? CreateNewPlayer()
         {
             var createNewPlayerWindow = new CreateNewPlayerWindow();
-            bool? result = createNewPlayerWindow.ShowDialog();
+            createNewPlayerWindow.ShowDialog();
 
             return createNewPlayerWindow.Player;
-        }
-
-        private void CreateNewPlayerWindow_PlayerCreated(object? sender, Player player)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void SetupSoloVocabulary()
-        {
-            throw new NotImplementedException();
         }
 
         private void InitSettingsCfg()

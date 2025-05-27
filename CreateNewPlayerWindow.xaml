@@ -13,13 +13,10 @@
                 <TextBox x:Name="nameTextBox" TextWrapping="Wrap" Text="" Width="120" Height="25"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal">
-                <Label x:Name="dateOfBirthLabel" Content="Date of birth: " Height="25"/>
-                <DatePicker x:Name="datePicker" HorizontalAlignment="Left"/>
-            </StackPanel>
+            <StackPanel Orientation="Horizontal"/>
         </StackPanel>
 
-        <Button x:Name="button" Content="OK" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Width="50" Height="30" Click="OK_button_Click"/>
+        <Button x:Name="button" Content="OK" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Width="50" Height="30" Click="OK_button_Click"/>
 
     </Grid>
 </Window>

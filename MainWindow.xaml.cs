@@ -17,21 +17,20 @@ namespace BrainStorm
 
         public GameMode GameMode { get; set; } = GameMode.Solo;
 
-        public Player? ActivePlayer { get; set; } = null;
-
-        public PlayersHandler PlayersFileHandler { get; set; } = new PlayersHandler();
-
         public MainWindow()
         {
             InitializeComponent();
 
             InitAllButtons();
+
+            var mainMenuWindow = new MainMenuWindow();
+            mainMenuWindow.ShowDialog();
+
+            /*
             ActivePlayer = CreateNewPlayer();
             PlayersFileHandler.AddPlayer(ActivePlayer);
             PlayersFileHandler.SavePlayers();
-
-            //if (File.Exists($"./settings.cfg") == false)
-            //    InitSettingsCfg();
+            */
         }
 
         private Player? CreateNewPlayer()
@@ -40,12 +39,6 @@ namespace BrainStorm
             createNewPlayerWindow.ShowDialog();
 
             return createNewPlayerWindow.Player;
-        }
-
-        private void InitSettingsCfg()
-        {
-            File.Create($"./settings.cfg");
-            // TODO
         }
 
         private void Button_Click(object sender, MouseButtonEventArgs e)

@@ -22,31 +22,23 @@ namespace BrainStorm
             }
         }
 
-        public void SavePlayers()
+        public void SavePlayers(List<Player> players)
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            string json = JsonSerializer.Serialize(Players, options);
+            string json = JsonSerializer.Serialize(players, options);
             File.WriteAllText(PlayersFile, json);
         }
 
-        public void LoadPlayers()
+        public List<Player> LoadPlayers()
         {
-            if (File.Exists(PlayersFile))
+            string json = File.ReadAllText(PlayersFile);
+
+            if ((json != null) && json != "")
             {
-                string json = File.ReadAllText(PlayersFile);
-                Players = JsonSerializer.Deserialize<List<Player>>(json) ?? new List<Player>();
+                return JsonSerializer.Deserialize<List<Player>>(json) ?? new List<Player>();
             }
 
-            else
-            {
-                Players = new List<Player>();
-            }
-        }
-
-        public void AddPlayer(Player? player)
-        {
-            if (player != null)
-                Players.Add(player);
+            return new List<Player>();
         }
     }
 }

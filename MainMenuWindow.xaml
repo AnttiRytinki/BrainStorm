@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BrainStorm"
         mc:Ignorable="d"
-        Title="BrainStorm Solo - Main Menu" Height="220" Width="300">
+        Title="BrainStorm Solo - Main Menu" Height="250" Width="300">
     <Grid>
 
         <Label x:Name="Player_label" Content="Player:" HorizontalAlignment="Left" Margin="90,18,0,0" VerticalAlignment="Top" Height="25"/>
 
-        <ComboBox x:Name="Player_comboBox" HorizontalAlignment="Center" Margin="0,43,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="Players_comboBox" HorizontalAlignment="Center" Margin="0,43,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Players_comboBox_SelectionChanged" />
 
-        <Button x:Name="NewPlayer_button" Content="New Player" HorizontalAlignment="Center" VerticalAlignment="Top" Width="70" Margin="0,87,0,0"/>
+        <Button x:Name="NewPlayer_button" Content="New Player" HorizontalAlignment="Center" VerticalAlignment="Top" Width="70" Margin="0,87,0,0" Click="NewPlayer_button_Click"/>
 
         <Button x:Name="HighScores_button" Content="High Scores" HorizontalAlignment="Center" Margin="0,121,0,0" VerticalAlignment="Top" Width="70"/>
 
